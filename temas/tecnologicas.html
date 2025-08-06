@@ -3,133 +3,187 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tecnológicas - Tu Empresa En Línea</title>
+    <title>Habilidades Tecnológicas - Tu Empresa En Línea</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
-            background: #f7f8fa;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            overflow-x: hidden;
         }
-        .welcome {
-            font-size: 2.2rem;
-            font-weight: 600;
-            margin-bottom: 2rem;
-            color: #222;
+
+        /* Header */
+        .header {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 1rem 0;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
         }
-        .desc {
-            font-size: 1.2rem;
-            color: #3a8dde;
+
+        .nav-link {
+            color: white !important;
+            font-weight: 500;
+            margin: 0 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: #667eea !important;
+            transform: translateY(-2px);
+        }
+
+        /* Main content */
+        .main-content {
+            margin-top: 100px;
+            padding: 4rem 0;
+            color: white;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
             margin-bottom: 2rem;
             text-align: center;
         }
-        .btn-back {
-            border-radius: 2rem;
-            padding: 0.7rem 2rem;
-            font-size: 1rem;
-            font-weight: 500;
-            background: linear-gradient(90deg, #3a8dde 0%, #6ed6ff 100%);
-            color: #fff;
-            border: none;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.07);
-            transition: background 0.2s;
+
+        .skill-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 2rem;
+            margin: 1rem;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.2);
         }
+
+        .skill-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .skill-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            display: block;
+            text-align: center;
+        }
+
+        .btn-back {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            padding: 0.8rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-block;
+            margin-top: 2rem;
+        }
+
         .btn-back:hover {
-            background: linear-gradient(90deg, #2a6bb7 0%, #4ec3e0 100%);
+            background: rgba(255, 255, 255, 0.3);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .skill-card {
+                margin: 0.5rem 0;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="welcome">Habilidades Tecnológicas</div>
-    <div class="desc">Explora nuestro programa de formación en tecnología, programación e inteligencia artificial con enfoque práctico y orientado a proyectos.</div>
-
-    <div class="container" style="max-width: 800px;">
-        <div class="mb-4">
-            <h3 class="fw-bold" style="color:#3a8dde;">Capítulos de Aprendizaje</h3>
-            <p>Nuestro programa está estructurado en capítulos progresivos que te guiarán desde los conceptos básicos hasta aplicaciones avanzadas, con un enfoque de nivel intermedio.</p>
+    <!-- Header -->
+    <nav class="header">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center">
+                <a href="../index.html" class="nav-link">Inicio</a>
+                <div>
+                    <a href="tecnologicas.html" class="nav-link active">Tecnológicas</a>
+                    <a href="blandas.html" class="nav-link">Blandas</a>
+                </div>
+            </div>
         </div>
-        <div class="mb-5">
-            <div class="card mb-3" style="border-radius:1.5rem; border:none; box-shadow:0 2px 8px rgba(58,141,222,0.07);">
-                <div class="card-body">
-                    <h4 class="card-title" style="color:#3a8dde;">Capítulo 1: Fundamentos de IA <span class="badge bg-info text-dark">Clases 1 a 8</span></h4>
-                    <p>Introducción a los conceptos básicos de la inteligencia artificial, su historia, aplicaciones actuales y fundamentos técnicos. Este capítulo establece las bases para comprender cómo la IA está transformando nuestra sociedad.</p>
-                    <ul>
-                        <li>Introducción a la Inteligencia Artificial y su impacto en la sociedad actual</li>
-                        <li>Machine Learning: conceptos fundamentales y aplicaciones prácticas</li>
-                        <li>Análisis y clasificación de datos con herramientas de IA</li>
-                        <li>Creatividad asistida por IA y generación de contenidos</li>
-                        <li>Metodologías ágiles para proyectos tecnológicos</li>
-                    </ul>
-                    <div class="mt-3">
-                        <span class="fw-bold">Clases destacadas:</span>
-                        <ul>
-                            <li>Introducción al Curso</li>
-                            <li>¿Qué es la IA?</li>
-                            <li>Creatividad con IA</li>
-                            <li>Chatbots y Asistentes de IA</li>
-                            <li>Dinámica de SCRUM</li>
-                            <li>Machine Learning</li>
-                            <li>Flipped Classroom: Robots Inteligentes</li>
-                            <li>Mini Hackathon I</li>
-                        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="container">
+            <h1 class="section-title">Habilidades Tecnológicas</h1>
+            <p class="text-center mb-5">Domina las herramientas digitales del mundo moderno</p>
+
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="skill-card">
+                        <span class="skill-icon">💻</span>
+                        <h3>Programación</h3>
+                        <p>Aprende lenguajes como Python, JavaScript o Java para crear soluciones digitales innovadoras.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="skill-card">
+                        <span class="skill-icon">📊</span>
+                        <h3>Análisis de Datos</h3>
+                        <p>Utiliza herramientas como Excel, SQL y Python para interpretar y visualizar información valiosa.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="skill-card">
+                        <span class="skill-icon">🌐</span>
+                        <h3>Desarrollo Web</h3>
+                        <p>Crea sitios web modernos y responsivos con HTML, CSS, JavaScript y frameworks populares.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="skill-card">
+                        <span class="skill-icon">☁️</span>
+                        <h3>Cloud Computing</h3>
+                        <p>Domina plataformas como AWS, Azure o Google Cloud para escalar aplicaciones globalmente.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="skill-card">
+                        <span class="skill-icon">🔒</span>
+                        <h3>Ciberseguridad</h3>
+                        <p>Protege sistemas y datos sensibles con conocimientos en seguridad informática y mejores prácticas.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="skill-card">
+                        <span class="skill-icon">🤖</span>
+                        <h3>Inteligencia Artificial</h3>
+                        <p>Explora machine learning y automatización para crear soluciones inteligentes y eficientes.</p>
                     </div>
                 </div>
             </div>
-            <div class="card mb-3" style="border-radius:1.5rem; border:none; box-shadow:0 2px 8px rgba(58,141,222,0.07);">
-                <div class="card-body">
-                    <h4 class="card-title" style="color:#3a8dde;">Capítulo 2: Programación y Datos <span class="badge bg-info text-dark">Clases 9 a 15</span></h4>
-                    <p>Fundamentos de programación con Python y su aplicación en el procesamiento de datos e inteligencia artificial. Este capítulo te dará las herramientas técnicas para implementar soluciones basadas en datos.</p>
-                    <ul>
-                        <li>Programación con Python: sintaxis, estructuras de datos y algoritmos</li>
-                        <li>Análisis y visualización de datos con bibliotecas especializadas</li>
-                        <li>Implementación de algoritmos de IA para toma de decisiones</li>
-                        <li>Colaboración en proyectos de código con herramientas modernas</li>
-                        <li>Integración de Python con sistemas de IA</li>
-                    </ul>
-                    <div class="mt-3">
-                        <span class="fw-bold">Clases destacadas:</span>
-                        <ul>
-                            <li>Python Básico</li>
-                            <li>Python para Datos</li>
-                            <li>IA y Toma de Decisiones</li>
-                            <li>Colaboración en Código</li>
-                            <li>Dinámica: "Resolvé con IA o no"</li>
-                            <li>IA aplicada: Análisis y Clasificación</li>
-                            <li>Mini Hackathon II: Asistente en Python</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="card mb-3" style="border-radius:1.5rem; border:none; box-shadow:0 2px 8px rgba(58,141,222,0.07);">
-                <div class="card-body">
-                    <h4 class="card-title" style="color:#3a8dde;">Capítulo 3: Aplicaciones Prácticas <span class="badge bg-info text-dark">Clases 16 a 22</span></h4>
-                    <p>Desarrollo de proyectos prácticos que integran los conocimientos adquiridos en inteligencia artificial y programación. Este capítulo te permitirá aplicar lo aprendido en situaciones reales.</p>
-                    <ul>
-                        <li>Diseño y planificación de proyectos tecnológicos</li>
-                        <li>Aplicación de Design Thinking en soluciones tecnológicas</li>
-                        <li>Integración de IA con hardware y dispositivos físicos</li>
-                        <li>Desarrollo e implementación de aplicaciones con IA</li>
-                        <li>Presentación y documentación de proyectos tecnológicos</li>
-                    </ul>
-                    <div class="mt-3">
-                        <span class="fw-bold">Clases destacadas:</span>
-                        <ul>
-                            <li>Ideación del Proyecto Final</li>
-                            <li>Aplicación de Design Thinking</li>
-                            <li>Desarrollo de Aplicaciones</li>
-                            <li>Integración de IA</li>
-                            <li>IA y Hardware</li>
-                            <li>Documentación Técnica</li>
-                            <li>Presentaciones Finales</li>
-                        </ul>
-                    </div>
-                </div>
+
+            <div class="text-center">
+                <a href="../index.html" class="btn-back">← Volver al Inicio</a>
             </div>
         </div>
     </div>
-    <a href="../index.html" class="btn btn-back">Volver al inicio</a>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
